@@ -1,0 +1,18 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+websockets==13.1
+python-dotenv==1.0.1
+python-multipart==0.0.19
+
+numpy<2
+opencv-python-headless==4.11.0.86
+
+# PyTorch is installed separately BEFORE this file so you get the right build
+# (see README.md "Backend"). For an NVIDIA GPU (the notebook used CUDA 12.1):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# CPU-only:
+#   pip install torch torchvision
+# The two lines below only guard the minimum versions (torch.load(weights_only=True)
+# and torchvision's ResNet50_Weights.IMAGENET1K_V2 need these).
+torch>=2.2
+torchvision>=0.17
